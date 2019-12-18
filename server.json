@@ -18,5 +18,6 @@
         "heapSize": "${JAVA_MAXHEAP:1024}",
         "minHeapSize": 256,
         "args":"-Dorg.glassfish.web.rfc2109_cookie_names_enforced=false"
-    }
+    },
+    "cfconfigfile" : "cfml-config.json"
 }
