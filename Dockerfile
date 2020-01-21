@@ -22,7 +22,7 @@ COPY lib lib
 
 # Pre-warm servlet container
 RUN mkdir wwwroot && \
-    box install commandbox-cfconfig \
+    box install commandbox-cfconfig && \
     box server start && box server stop && \
     box artifacts clean --force
 
