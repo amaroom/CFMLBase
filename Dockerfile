@@ -15,13 +15,14 @@ ENV WORK_ENVIRONMENT=DEVELOP \
     JAVA_MAXHEAP=1024 \
     WEB_PORT=8080
 
-COPY server.json ./
+COPY cfml-config.json server.json ./
 
 # external libs, e.g Redis and AWS
 COPY lib lib
 
 # Pre-warm servlet container
 RUN mkdir wwwroot && \
+    box install commandbox-cfconfig && \
     box server start && box server stop && \
     box artifacts clean --force
 
