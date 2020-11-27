@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  web:
+    image: amaroom/cfmlbase:lucee5.3.7
+    ports:
+     - "8080:8080"
+    volumes:
+     - ./wwwroot/:/opt/cfml/wwwroot/
