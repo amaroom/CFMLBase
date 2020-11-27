@@ -1,6 +1,6 @@
 {
     "app":{
-        "cfengine":"lucee@5.3.3+62",
+        "cfengine":"lucee@5.3.7+47",
         "serverHomeDirectory":"servlet-home",
         "libDirs": "lib",
         "sessionCookieSecure": false,
@@ -12,11 +12,12 @@
         "webroot": "wwwroot",
         "http":{
             "port":"${WEB_PORT:8080}"
-        }
+        },
+        "blockCFAdmin":"false"
     },
     "jvm": {
-        "heapSize": "${JAVA_MAXHEAP:1024}",
-        "minHeapSize": 256,
+        "heapSize": "${JAVA_MAXHEAP:256}",
+        "minHeapSize": 32,
         "args":"-Dorg.glassfish.web.rfc2109_cookie_names_enforced=false"
     },
     "cfconfigfile" : "cfml-config.json"
